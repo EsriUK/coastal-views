@@ -1,0 +1,458 @@
+html,
+body,
+#map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+body {
+    overflow: hidden;
+	font-family: open sans, sans-serif, Arial;
+}
+/*-----------------SVG ANNIMATION-------------------*/
+
+svg path {
+    display: none;
+}
+body.animate svg path {
+    display: block;
+    stroke-dasharray: 2500;
+    animation: dash 10s;
+    -webkit-animation-iteration-count: 1;
+    /* Chrome, Safari, Opera */
+    
+    animation-iteration-count: 1;
+    -webkit-animation-direction: reverse;
+    /* Chrome, Safari, Opera */
+    
+    animation-direction: reverse;
+}
+body.end svg path {
+    display: block;
+    stroke: 1px #000000;
+}
+@keyframes dash {
+    to {
+        stroke-dashoffset: 2500;
+    }
+}
+/*-----------------INITIAL SPLASH-------------------*/
+
+#splash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    margin-left: -250px;
+    margin-top: -250px;
+    background-color: #ffffff;
+}
+#splash > h1 {
+    text-align: center;
+    color: #505050;
+    font-weight: 100;
+    padding: 10px 50px 10px 50px;
+}
+#splash > p {
+    color: #989898;
+    text-align: justify;
+    font-weight: 400;
+    padding: 10px 30px 10px 30px;
+    font-size: 15px;
+}
+#loader {
+    z-index: 25;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    top: 90%;
+    margin-top: -17px;
+    color: #fff;
+}
+#loader .ball-pulse > div {
+    width: 12px;
+    height: 12px;
+    background-color: rgb(0, 177, 137);
+}
+#play {
+    display: none;
+    z-index: 12;
+    background-color: rgb(0, 177, 137);
+    padding: 10px 35px 10px 35px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    cursor: pointer;
+	margin-top: 22px;
+}
+#play.show {
+    display: inline-block;
+}
+#play:hover {
+    background-color: rgb(2, 154, 120);
+}
+#grey-area {
+	text-align: center;
+    background-color: #e6e6e6;
+    width: 100%;
+    height: 108px;
+    margin-top: 20px;
+	padding-top: 20px;
+}
+/*-----------------REPLAY-------------------*/
+
+#replay {
+    display: none;
+    z-index: 12;
+    position: absolute;
+    left: 11px;
+    bottom: 110px;
+    background-color: #ffffff;
+    padding: 2px 15px 2px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #000000;
+    cursor: pointer;
+    width: 80px;
+}
+#replay:hover {
+    background-color: #d6d6d6;
+}
+#replay > span {
+    padding-left: 20px;
+    margin: 10px;
+    position: absolute;
+}
+#replay > div {
+    position: relative;
+    margin-top: 7px;
+    margin-left: -10px;
+}
+#replay > div > i {
+    padding-left: 3px;
+	font-size: 30px!important;
+}
+/*-----------------HOME BUTTON-------------------*/
+
+#HomeButton {
+    position: absolute;
+    top: 95px;
+    left: 20px;
+}
+.HomeButton .home {
+    width: 26px;
+    height: 26px;
+    background-color: #FFF;
+    background-image: url("../img/home.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.HomeButton .home:hover {
+    background-color: #eee;
+}
+/*-----------------INFO PANEL-------------------*/
+
+#panel-toggle {
+    display: none;
+    z-index: 12;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 4px;
+    font-size: 8px;
+    -webkit-transition: right 1s;
+    transition: right 1s;
+	border-bottom-left-radius: 2px;
+}
+#panel-toggle:hover {
+    background-color: #d6d6d6;
+}
+#panel-toggle.slide {
+    right: 380px;
+    -webkit-transition: right 1s;
+    transition: right 1s;
+}
+.material-icons {
+    font-size: 40px!important;
+    color: rgb(0, 177, 137);
+}
+#panel {
+    width: 350px;
+    font-size: 20px;
+    font-weight: normal;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 111;
+    overflow: auto;
+    padding: 15px;
+    color: #909090;
+    right: -380px;
+    top: 0px;
+    cursor: default;
+    text-align: center;
+    height: 100%;
+    -webkit-transition: right 1s;
+    transition: right 1s;
+}
+#panel.show {
+    right: 0;
+}
+#panelMobile {
+    width: 100%;
+    height: 50px;
+    font-weight: normal;
+    background-color: rgb(230, 230, 230);
+    -webkit-font-smoothing: antialiased;
+    position: absolute;
+    z-index: 111;
+    overflow: auto;
+    color: white;
+    left: 0px;
+    top: 0px;
+    cursor: default;
+    text-align: center;
+}
+#infoMobile {
+    padding-top: 12px;
+}
+#info {
+    padding: 0px 18px 18px 18px;
+}
+#info > div > img {
+    border-radius: 250px;
+    width: 100%;
+    border-style: solid;
+    border-color: rgba(0, 197, 255, 0.78);
+    border-width: 5px;
+}
+#info > h1 {
+    font-weight: 100;
+    font-size: 36px;
+    color: #505050;
+    margin-top: 5px;
+    padding-bottom: 30px;
+}
+#info > p {
+    font-weight: normal;
+    text-align: justify;
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+#info > h2 {
+    text-align: center;
+    border: 1px dashed #505050;
+    border-radius: 50%;
+    font-weight: 400;
+    color: #505050;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    margin-right: 0;
+    margin-left: 43%;
+}
+/*-----------------ZOOM SLIDER-------------------*/
+
+.esriSimpleSlider {
+    border: none;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.esriSimpleSlider {
+    top: 20px;
+}
+.esriSimpleSlider div {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 28px;
+}
+.esriSimpleSlider .esriSimpleSliderIncrementButton {
+    border-bottom: 1px solid #e4e4e4;
+}
+.esriSimpleSlider,
+.esriSimpleSlider .esriSimpleSliderIncrementButton,
+.esriSimpleSlider .esriSimpleSliderDecrementButton,
+.HomeButton .home {
+    border-radius: 0px;
+}
+.esriSimpleSlider .esriSimpleSliderIncrementButton,
+.esriSimpleSlider .esriSimpleSliderDecrementButton {}
+/*-----------------ATTRIBUTION-------------------*/
+
+span.esriAttribution {
+    FONT-FAMILY: open sans, sans-serif;
+}
+/*-----------------RETURN INFO/DOCKED POP-UP-------------------*/
+
+.card {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	overflow: visible;
+	margin: 20px 10px;
+	border-radius: 2px;
+	background-color: #fff;
+}
+
+#return {
+	display: none;
+	bottom: 0;
+	left: 0;
+	margin: 20px;
+	padding: 20px;
+	width: 390px;
+	font-weight: 400;
+	color: #fff;
+	font-size: 15px;
+	position: absolute;
+	background: rgb(0, 177, 137);
+}
+
+.distance {
+	padding-bottom: 30px;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+}
+.distance:before,
+.distance:after {
+	background-color: #fff;
+	content: "";
+	display: inline-block;
+	height: 2px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+}
+.distance:before {
+	right: 0.5em;
+	margin-left: -50%;
+}
+.distance:after {
+	left: 0.5em;
+	margin-right: -50%;
+}
+
+#distance > em {
+	font-style: normal;
+	margin-right: 4px;
+}
+
+.point {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	display: inline-block;
+	border: 2px solid #fff;
+	background: rgb(0, 177, 137);
+	position: absolute;
+	top: 4px;
+	z-index: 10;
+}
+
+.point.start {
+	left: 0px;
+}
+
+.point.end {
+	right: 0px;
+}
+
+.location {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	z-index: 10;
+	font-size: 17px;
+}
+
+.location.start {
+	left: 0;
+}
+
+.location.end {
+	right: 0;
+}
+/*-----------------RESPONSIVE-------------------*/
+
+
+@media only screen and (min-width: 1026px) and (min-height: 601px) {
+    #panelMobile {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1025px) {
+    #panel {
+        display: none;
+    }
+    #panel-toggle {
+        display: none!important;
+    }
+    #map_zoom_slider {
+        margin-top: 50px;
+    }
+    #HomeButton {
+        top: 146px;
+    }
+}
+@media only screen and (max-height: 600px) {
+    #panel {
+        display: none;
+    }
+    #panel-toggle {
+        display: none!important;
+    }
+    #map_zoom_slider {
+        margin-top: 50px;
+    }
+    #HomeButton {
+        top: 146px;
+    }
+	
+}
+@media only screen and (max-width: 650px) {
+    #return {
+        margin: 0px;
+        padding: 10px;
+        width: calc(100% - 20px);
+		border-radius: 0;
+    }
+    body.infoshown .esriControlsBR {
+        bottom: 77px;
+    }
+    #replay {
+        display: none!important;
+    }
+
+	#grey-area,
+	#splash {
+		background: none;
+		box-shadow: none;
+	}
+
+    #splash h1,
+	#splash p{
+        display: none;
+    }
+    #play {
+		position: absolute;
+		top: 165%;
+		margin-top: 0;
+		left: 50%;
+		margin-left: -65px;
+    }
+    #loader {
+        top: 185%;
+    }
+}
+@media only screen and (max-height: 415px) {
+   #replay {
+        display: none!important;
+    }
+}

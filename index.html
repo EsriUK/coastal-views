@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+
+    <title>Coastal views from the United Kingdom</title>
+
+    <link rel="icon" href="img/favicon.png" type="image/gif">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.17/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.17/esri/css/esri.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/loaders.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://js.arcgis.com/3.17/"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <div id="panel">
+        <div id="info">
+            <h1>How it works</h1>
+            <h2>1</h2>
+            <img src="img/splash-demo-1.svg">
+            <p>Viewpoints were plotted when there was a significant change in the direction of the UK coastline.</p>
+            <h2>2</h2>
+            <img src="img/splash-demo-2.svg">
+            <p>At each viewpoint we assumed the person would be facing perpendicular to the coastline. As such, we drew a straight line until it touched another landmass.</p>
+            <h2>3</h2>
+            <img src="img/splash-demo-3.svg">
+            <p>We then repeated the process for every viewpoint.</p>
+        </div>
+    </div>
+
+    <div id="panelMobile">
+        <div id="infoMobile">
+            <a href="http://www.esriuk.com/about" target="_blank">
+                <img src="img/esri-uk-logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div id="splash" class="card">
+        
+		<h1>Coastal views from the United Kingdom</h1>
+        
+		<p>When you're at the coast and gaze off into the horizon, do you know which countries are directly across the sea from you? </p>
+		
+		<p>To find the answer, you can’t simply draw a straight line on a map because the Earth is not flat – instead you need to factor in the curvature of the Earth.</p>
+
+		<p>Click reveal to see what you might be looking at – you may be surprised!</p>
+
+		 <div id="grey-area">
+
+			<div id="play" class="card">REVEAL</div>
+
+            <div id="loader" class="loader">
+                <div class="loader-inner ball-pulse">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="panel-toggle">
+        <i class="material-icons">info</i>
+    </div>
+    <div id="replay" class="card">
+        <span>REPLAY</span>
+        <div>
+            <i class="material-icons">replay</i>
+        </div>
+    </div>
+	<div id="return" class="card">
+		<div class="distance">
+			<span class="point start"></span>
+			<span class="location start">UK</span>
+			<span id="distance"><em>0</em>miles</span>
+			<span class="point end"></span>
+			<span id="destination" class="location end">Destination</span>
+		</div>
+	</div>
+    <div id="HomeButton"></div>
+</body>
+
+</html>
