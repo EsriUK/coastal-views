@@ -1,4 +1,4 @@
-<img src="">
+<img src="https://github.com/maplabs/maplabs.github.io/blob/master/img/placeholder_coastal_350x150.png?raw=true">
 
 #About
 
