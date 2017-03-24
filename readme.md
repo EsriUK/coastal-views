@@ -1,23 +1,23 @@
 <img src="https://github.com/maplabs/maplabs.github.io/blob/master/img/placeholder_coastal_350x150.png?raw=true">
 
-#About
+# About
 
 Coastal Views is an animated visualisation showing 'theoretical' sea views from the coastline of the United Kingdom. The app is written in JavaScript and built with v3.17 of the ArcGIS JavaScript API.
 
 
-#Sample
+# Sample
 
 You can try a live sample of the app [here](http://apps.esriuk.com/app/CoastalViews/2/wmt/view/49c7d86935944b2cbb616a35f3f29ed2/index.html).
 
-#Configuring
+# Configuring
 
 You can animate your own views by creating a polyline feature service. You can update line 8 of main.js with your new service.
 
-#Issues
+# Issues
 
 Find a bug or want to request a new feature? Please let us know by submitting an issue.
 
-#Licensing
+# Licensing
 
 Copyright 2016 ESRI (UK) Limited
 
