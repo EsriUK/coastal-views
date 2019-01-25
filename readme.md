@@ -7,7 +7,7 @@ Coastal Views is an animated visualisation showing 'theoretical' sea views from 
 
 # Sample
 
-You can try a live sample of the app [here](http://apps.esriuk.com/app/CoastalViews/2/wmt/view/49c7d86935944b2cbb616a35f3f29ed2/index.html).
+You can try a live sample of the app [here](https://apps.esriuk.com/app/CoastalViews/2/wmt/view/49c7d86935944b2cbb616a35f3f29ed2/index.html).
 
 # Configuring
 
